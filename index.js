@@ -7,6 +7,8 @@ import {
   startMongoConnection,
   closeMongoConnection
 } from './config/db/index.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const startServer = async () => {
   process.on('warning', warning =>
