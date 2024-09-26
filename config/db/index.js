@@ -4,6 +4,7 @@ import logger from '../../common/utils/logger/index.js';
 
 export async function startMongoConnection() {
   const connectionUrl = mongoDBConfigs.mongoURL;
+  
   const mongooseConnectionOptions = {
     connectTimeoutMS: 360000,
     socketTimeoutMS: 360000,

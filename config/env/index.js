@@ -8,6 +8,7 @@ export const environment = process.env.NODE_ENV || 'development';
 export const mongoDBConfigs = {
   mongoURL: process.env.MONGO_URL
 };
+console.log(process.env.MONGO_URL);
 
 export const EMAIL_CONFIG = {
   emailUser: process.env.EMAIL_USER,
