@@ -9,7 +9,7 @@ import requestLogger from '../common/middleware/requestLogger/index.js';
 import { ErrorHandler } from '../common/middleware/errorHandler/index.js';
 
 const corsOptions = {
-    origin: '*',
+    origin: 'http://localhost:5173/,https://elearning-navy.vercel.app/',
     maxAge: 3600,
 };
 const helmetOptions = {
