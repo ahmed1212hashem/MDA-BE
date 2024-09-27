@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema(
       enum: Object.values(PREDEFINED_COURSES)
     }],
     gradeLevel:{
-      type:String
+      type:Number
     },
     isVerified: {
       type: Boolean,

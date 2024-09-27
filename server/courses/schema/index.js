@@ -29,7 +29,7 @@ const courseSchema = new mongoose.Schema(
         enum: Object.values(PREDEFINED_COURSES)
       },
       gradeLevel:{
-        type:String
+        type:Number
       },
   },
   { timestamps: true }

@@ -68,7 +68,7 @@ export default {
           PREDEFINED_COURSES.PHYSICAL_EDUCATION,
           PREDEFINED_COURSES.SOCIAL_STUDIES,
         )),
-        gradeLevel:Joi.string()
+        gradeLevel:Joi.number()
     })
   },
   [CONTROLLERS.UPDATE_USER]: {
@@ -85,6 +85,15 @@ export default {
         email: Joi.string().optional(),
         isActive: Joi.boolean().optional(),
         role: Joi.string().forbidden(),
+        gradesAssigned:Joi.array().items(Joi.number()),
+        coursesAssigned:Joi.array().items(Joi.string()  .valid(
+          PREDEFINED_COURSES.ELA,
+          PREDEFINED_COURSES.ELECTIVES,
+          PREDEFINED_COURSES.MATH,
+          PREDEFINED_COURSES.PHYSICAL_EDUCATION,
+          PREDEFINED_COURSES.SOCIAL_STUDIES,
+        )),
+        gradeLevel:Joi.number()
       })
       .required()
   },

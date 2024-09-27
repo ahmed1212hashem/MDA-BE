@@ -28,7 +28,7 @@ export default {
       courseDescription: Joi.string().allow(''),
       property: Joi.string().uri().allow(null, ''),
       pdfLink: Joi.string().uri().allow(null, ''),
-      gradeLevel: Joi.string().required(),
+      gradeLevel: Joi.number().required(),
       courseCategory:Joi.string().valid(
         PREDEFINED_COURSES.ELA,
         PREDEFINED_COURSES.ELECTIVES,
@@ -50,7 +50,7 @@ export default {
       courseDescription: Joi.string().allow('').optional(),
       youtubeLink: Joi.string().uri().allow(null, '').optional(),
       pdfLink: Joi.string().uri().allow(null, '').optional(),
-      gradeLevel: Joi.string().optional(),
+      gradeLevel: Joi.number().optional(),
       courseCategory:Joi.string()  .valid(
         PREDEFINED_COURSES.ELA,
         PREDEFINED_COURSES.ELECTIVES,
