@@ -12,7 +12,6 @@ class CourseService {
   async listCourses(query) {
     try {
       const options = getPaginationAndSortingOptions(query);
-      console.log(query)
       const courses = await CourseModel.find(query, options, null);
       return { courses, options };
     } catch (e) {

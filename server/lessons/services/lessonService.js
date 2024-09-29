@@ -11,15 +11,10 @@ const { BAD_REQUEST } = StatusCodes;
 class LessonService {
   async listLessons(query) {
     try {
-      const options = getPaginationAndSortingOptions(query);
-      let lessons;
-      if(query.courseId){
-        lessons = await LessonModel.find({ courseId:query.courseId }, options, null);
-      }
-      else{
-       lessons = await LessonModel.find({  }, options, null);
-      }
-      return { lessons, options };
+      
+      const lessons = await LessonModel.find(query, null, null);
+
+      return lessons;
     } catch (e) {
       logger.error(e);
       throw e;
