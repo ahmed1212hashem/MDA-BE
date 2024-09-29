@@ -2,8 +2,10 @@ import LessonSchema from '../schema/index.js';
 
 class Lesson {
   async find(selectors = {}, options = {}) {
+    const sortOptions={};
+    sortOptions['lessonOrder'] = 1
     const result = await LessonSchema.find(selectors)
-    .sort('-updatedAt')
+    .sort(sortOptions)
     .lean()
     .maxTimeMS(60000);
     return result;
