@@ -25,7 +25,6 @@ const lessonSchema = new mongoose.Schema(
     },
     type: {
         type: String,
-        enum: ['video', 'pdf', 'text'],
         required: true
     },
     description: {
